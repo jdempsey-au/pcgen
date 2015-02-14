@@ -51,6 +51,7 @@ import pcgen.persistence.lst.output.prereq.PrerequisiteWriter;
 import pcgen.rules.persistence.ChoiceSetLoadUtilities;
 import pcgen.rules.persistence.TokenLibrary;
 import pcgen.rules.persistence.TokenSupport;
+import pcgen.rules.persistence.token.CDOMToken;
 import pcgen.rules.persistence.token.DeferredToken;
 import pcgen.rules.persistence.token.ParseResult;
 import pcgen.rules.persistence.token.PostDeferredToken;
@@ -496,4 +497,12 @@ public abstract class LoadContextInst implements LoadContext
 	{
 		return support.getGroup(cl, s);
 	}
+
+	@Override
+	public <T extends Loadable> List<? extends CDOMToken<T>> getTokens(Class<T> cl,
+		String name)
+	{
+		return support.getTokens(cl, name);
+	}
+		
 }

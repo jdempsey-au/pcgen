@@ -135,6 +135,8 @@ public final class PCGenActionMap extends ActionMap
 	public static final String LOGGING_LEVEL_COMMAND = TOOLS_COMMAND + ".loggingLevel";
 	public static final String CALCULATOR_COMMAND = TOOLS_COMMAND + ".calculator";
 	public static final String COREVIEW_COMMAND = TOOLS_COMMAND + ".coreview";
+	public static final String LST_EDITOR_COMMAND = TOOLS_COMMAND + ".lstEditor";
+	
 	//the help menu commands
 	public static final String HELP_COMMAND = "help";
 	public static final String HELP_CONTEXT_COMMAND = HELP_COMMAND + ".context";
@@ -193,6 +195,8 @@ public final class PCGenActionMap extends ActionMap
 		put(LOGGING_LEVEL_COMMAND, new LoggingLevelAction());
 		put(CALCULATOR_COMMAND, new CalculatorAction());
 		put(COREVIEW_COMMAND, new CoreViewAction());
+		put(LST_EDITOR_COMMAND, new LstEditorAction());
+		
 		put(INSTALL_DATA_COMMAND, new InstallDataAction());
 		put(FILTERS_COMMAND, new FiltersAction());
 		put(KIT_FILTERS_COMMAND,
@@ -1144,6 +1148,22 @@ public final class PCGenActionMap extends ActionMap
 		public void actionPerformed(ActionEvent e)
 		{
 			frame.showAboutDialog();
+		}
+
+	}
+
+	private class LstEditorAction extends PCGenAction
+	{
+
+		public LstEditorAction()
+		{
+			super("mnuToolsListEditor", LST_EDITOR_COMMAND, Icons.Edit16);
+		}
+
+		@Override
+		public void actionPerformed(ActionEvent e)
+		{
+			frame.showLstEditorDialog();
 		}
 
 	}

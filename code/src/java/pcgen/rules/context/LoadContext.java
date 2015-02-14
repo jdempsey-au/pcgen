@@ -33,6 +33,7 @@ import pcgen.core.Campaign;
 import pcgen.core.prereq.Prerequisite;
 import pcgen.persistence.PersistenceLayerException;
 import pcgen.persistence.lst.CampaignSourceEntry;
+import pcgen.rules.persistence.token.CDOMToken;
 import pcgen.rules.persistence.token.ParseResult;
 
 public interface LoadContext
@@ -148,4 +149,13 @@ public interface LoadContext
 	public void loadLocalToken(Object token);
 	
 	public GroupDefinition<?> getGroup(Class<?> cl, String s);
+
+	/**
+	 * @param cl
+	 * @param name
+	 * @return
+	 */
+	public <T extends Loadable> List<? extends CDOMToken<T>> getTokens(Class<T> cl,
+		String name);
+	
 }

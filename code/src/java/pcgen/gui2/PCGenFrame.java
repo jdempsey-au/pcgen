@@ -77,24 +77,24 @@ import org.lobobrowser.html.test.SimpleUserAgentContext;
 import pcgen.cdom.base.Constants;
 import pcgen.cdom.content.Sponsor;
 import pcgen.core.Globals;
+import pcgen.core.utils.ShowMessageDelegate;
 import pcgen.facade.core.CampaignFacade;
 import pcgen.facade.core.CharacterFacade;
 import pcgen.facade.core.CharacterStubFacade;
 import pcgen.facade.core.ChooserFacade;
 import pcgen.facade.core.CompanionFacade;
 import pcgen.facade.core.DataSetFacade;
-import pcgen.facade.util.DefaultReferenceFacade;
 import pcgen.facade.core.EquipmentBuilderFacade;
 import pcgen.facade.core.GameModeFacade;
 import pcgen.facade.core.PartyFacade;
-import pcgen.facade.util.ReferenceFacade;
 import pcgen.facade.core.SourceSelectionFacade;
 import pcgen.facade.core.SpellBuilderFacade;
 import pcgen.facade.core.UIDelegate;
+import pcgen.facade.util.DefaultReferenceFacade;
+import pcgen.facade.util.ListFacade;
+import pcgen.facade.util.ReferenceFacade;
 import pcgen.facade.util.event.ReferenceEvent;
 import pcgen.facade.util.event.ReferenceListener;
-import pcgen.facade.util.ListFacade;
-import pcgen.core.utils.ShowMessageDelegate;
 import pcgen.gui2.dialog.AboutDialog;
 import pcgen.gui2.dialog.ChooserDialog;
 import pcgen.gui2.dialog.EquipCustomizerDialog;
@@ -102,6 +102,7 @@ import pcgen.gui2.dialog.PostLevelUpDialog;
 import pcgen.gui2.dialog.RadioChooserDialog;
 import pcgen.gui2.dialog.SpellChoiceDialog;
 import pcgen.gui2.dialog.TipOfTheDay;
+import pcgen.gui2.editor.LstEditorDialog;
 import pcgen.gui2.sources.SourceSelectionDialog;
 import pcgen.gui2.tabs.InfoTabbedPane;
 import pcgen.gui2.tools.Icons;
@@ -2090,6 +2091,11 @@ public final class PCGenFrame extends JFrame implements UIDelegate
 		aFrame.setSize(new Dimension(505, size));
 		Utility.setDialogRelativeLocation(this, aFrame);
 		aFrame.setVisible(true);
+	}
+
+	public void showLstEditorDialog()
+	{
+		new LstEditorDialog(this).setVisible(true);
 	}
 
 	public void showAboutDialog()

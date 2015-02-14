@@ -19,6 +19,7 @@ package pcgen.rules.persistence;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.NoSuchElementException;
@@ -173,6 +174,26 @@ public final class TokenLibrary implements PluginLoader
 			}
 		}
 		loadFamily(TokenFamily.CURRENT, newToken);
+	}
+
+	/**
+	 * Retrieve the set of tokens which can process tags for the specified class. 
+	 * Note that global tokens must be retrieved separately using the CDOMObject 
+	 * class.
+	 * 
+	 * @param cl The class to retrieve tokens for.
+	 * @return The set of tokens.
+	 */
+	public static Set<CDOMToken<?>> getTokensForCLass(
+		Class<? extends Loadable> cl)
+	{
+		Set<CDOMToken<?>> tokens = new HashSet<CDOMToken<?>>();
+
+		for (TokenFamily family : TOKEN_FAMILIES)
+		{
+			tokens.addAll(family.getTokens(cl));
+		}
+		return tokens;
 	}
 
 	public static void loadFamily(TokenFamily family, Object newToken)
