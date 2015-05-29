@@ -51,7 +51,7 @@ OPTION:gameMode.Pathfinder_PFS.allStatsValue=10
 
 # TODO: p.8 All characters gain Common as a free language.
 # You gain free languages granted by your race, ethnicity (for humans), and class (e.g., Druidic for druids).
-# If you have a high Intelligence modifier, you may select bonus languages from those listed in your race’s entry in the Core Rulebook and the Modern Human Languages list (The Inner Sea World Guide 251).
+# If you have a high Intelligence modifier, you may select bonus languages from those listed in your race's entry in the Core Rulebook and the Modern Human Languages list (The Inner Sea World Guide 251).
 # Certain classes grant access to additional bonus languages (e.g., Draconic for wizards).
 # Humans and half-elves with high Intelligence scores may learn all the above languages as bonus languages as well as any other language except Druidic and the languages listed under Ancient Languages on page 251 of The Inner Sea World Guide.
 # All languages except Druidic are available by putting a skill rank in Linguistics (see below).
@@ -99,6 +99,7 @@ PCC:@/pathfinder_pfs/paizo/campaign_setting/pfs_dragon_empires_gazetteer/pfs_dra
 PCC:@/pathfinder_pfs/paizo/campaign_setting/pfs_guide_to_the_river_kingdoms/pfs_guide_to_the_river_kingdoms.pcc
 PCC:@/pathfinder_pfs/paizo/campaign_setting/pfs_heart_of_the_jungle/pfs_heart_of_the_jungle.pcc
 PCC:@/pathfinder_pfs/paizo/campaign_setting/pfs_inner_sea_bestiary/pfs_inner_sea_bestiary.pcc
+PCC:@/pathfinder_pfs/paizo/campaign_setting/pfs_inner_sea_combat/pfs_inner_sea_combat.pcc
 PCC:@/pathfinder_pfs/paizo/campaign_setting/pfs_inner_sea_world_guide/pfs_inner_sea_world_guide.pcc
 PCC:@/pathfinder_pfs/paizo/campaign_setting/pfs_pathfinder_society_field_guide/pfs_pathfinder_society_field_guide.pcc
 PCC:@/pathfinder_pfs/paizo/campaign_setting/pfs_seekers_of_secrets/pfs_seekers_of_secrets.pcc
@@ -116,7 +117,6 @@ PCC:@/pathfinder_pfs/paizo/campaign_setting/pfs_seekers_of_secrets/pfs_seekers_o
 # PCC:@/pathfinder_pfs/paizo/campaign_setting/pfs_giants_revisited/pfs_giants_revisited.pcc
 # PCC:@/pathfinder_pfs/paizo/campaign_setting/pfs_gods_and_magic/pfs_gods_and_magic.pcc
 # PCC:@/pathfinder_pfs/paizo/campaign_setting/pfs_horseman_of_the_apocalypse/pfs_horseman_of_the_apocalypse.pcc
-# PCC:@/pathfinder_pfs/paizo/campaign_setting/pfs_inner_sea_combat/pfs_inner_sea_combat.pcc
 # PCC:@/pathfinder_pfs/paizo/campaign_setting/pfs_inner_sea_gods/pfs_inner_sea_gods.pcc
 # PCC:@/pathfinder_pfs/paizo/campaign_setting/pfs_inner_sea_magic/pfs_inner_sea_magic.pcc
 # PCC:@/pathfinder_pfs/paizo/campaign_setting/pfs_lands_of_the_linnorm_kings/pfs_lands_of_the_linnorm_kings.pcc
@@ -140,6 +140,7 @@ PCC:@/pathfinder_pfs/paizo/player_companion/pfs_andoran_spirit_of_liberty/pfs_an
 PCC:@/pathfinder_pfs/paizo/player_companion/pfs_animal_archive/pfs_animal_archive.pcc
 PCC:@/pathfinder_pfs/paizo/player_companion/pfs_blood_of_angels/pfs_blood_of_angels.pcc
 PCC:@/pathfinder_pfs/paizo/player_companion/pfs_blood_of_fiends/pfs_blood_of_fiends.pcc
+PCC:@/pathfinder_pfs/paizo/player_companion/pfs_blood_of_the_moon/pfs_blood_of_the_moon.pcc
 PCC:@/pathfinder_pfs/paizo/player_companion/pfs_cheliax_empire_of_devils/pfs_cheliax_empire_of_devils.pcc
 PCC:@/pathfinder_pfs/paizo/player_companion/pfs_dragon_empires_primer/pfs_dragon_empires_primer.pcc
 PCC:@/pathfinder_pfs/paizo/player_companion/pfs_dungeoneers_handbook/pfs_dungeoneers_handbook.pcc
@@ -152,16 +153,17 @@ PCC:@/pathfinder_pfs/paizo/player_companion/pfs_goblins_of_golarion/pfs_goblins_
 PCC:@/pathfinder_pfs/paizo/player_companion/pfs_halflings_of_golarion/pfs_halflings_of_golarion.pcc
 PCC:@/pathfinder_pfs/paizo/player_companion/pfs_inner_sea_primer/pfs_inner_sea_primer.pcc
 PCC:@/pathfinder_pfs/paizo/player_companion/pfs_orcs_of_golarion/pfs_orcs_of_golarion.pcc
+PCC:@/pathfinder_pfs/paizo/player_companion/pfs_people_of_the_stars/pfs_people_of_the_stars.pcc
 PCC:@/pathfinder_pfs/paizo/player_companion/pfs_pirates_of_the_inner_sea/pfs_pirates_of_the_inner_sea.pcc
 PCC:@/pathfinder_pfs/paizo/player_companion/pfs_qadira_gateway_to_the_east/pfs_qadira_gateway_to_the_east.pcc
 PCC:@/pathfinder_pfs/paizo/player_companion/pfs_sargava_the_lost_colony/pfs_sargava_the_lost_colony.pcc
+#PCC:@/pathfinder_pfs/paizo/player_companion/pfs_taldor_echoes_of_glory/pfs_taldor_echoes_of_glory.pcc
 PCC:@/pathfinder_pfs/paizo/player_companion/pfs_varisia_birthplace_of_legends/pfs_varisia_birthplace_of_legends.pcc
 
 # PCC:@/pathfinder_pfs/paizo/player_companion/pfs_advanced_class_origins/pfs_advanced_class_origins.pcc
 # PCC:@/pathfinder_pfs/paizo/player_companion/pfs_alchemy_manual/pfs_alchemy_manual.pcc
 # PCC:@/pathfinder_pfs/paizo/player_companion/pfs_bastards_of_golarion/pfs_bastards_of_golarion.pcc
 # PCC:@/pathfinder_pfs/paizo/player_companion/pfs_blood_of_the_elements/pfs_blood_of_the_elements.pcc
-# PCC:@/pathfinder_pfs/paizo/player_companion/pfs_blood_of_the_moon/pfs_blood_of_the_moon.pcc
 # PCC:@/pathfinder_pfs/paizo/player_companion/pfs_blood_of_the_night/pfs_blood_of_the_night.pcc
 # PCC:@/pathfinder_pfs/paizo/player_companion/pfs_champions_of_balance/pfs_champions_of_balance.pcc
 # PCC:@/pathfinder_pfs/paizo/player_companion/pfs_champions_of_purity/pfs_champions_of_purity.pcc
@@ -179,11 +181,9 @@ PCC:@/pathfinder_pfs/paizo/player_companion/pfs_varisia_birthplace_of_legends/pf
 # PCC:@/pathfinder_pfs/paizo/player_companion/pfs_people_of_the_north/pfs_people_of_the_north.pcc
 # PCC:@/pathfinder_pfs/paizo/player_companion/pfs_people_of_the_river/pfs_people_of_the_river.pcc
 # PCC:@/pathfinder_pfs/paizo/player_companion/pfs_people_of_the_sands/pfs_people_of_the_sands.pcc
-# PCC:@/pathfinder_pfs/paizo/player_companion/pfs_people_of_the_stars/pfs_people_of_the_stars.pcc
 # PCC:@/pathfinder_pfs/paizo/player_companion/pfs_quests_and_campaigns/pfs_quests_and_campaigns.pcc
 # PCC:@/pathfinder_pfs/paizo/player_companion/pfs_ranged_tactics_toolbox/pfs_ranged_tactics_toolbox.pcc
 # PCC:@/pathfinder_pfs/paizo/player_companion/pfs_second_darkness/pfs_second_darkness.pcc
-# PCC:@/pathfinder_pfs/paizo/player_companion/pfs_taldor_echoes_of_glory/pfs_taldor_echoes_of_glory.pcc
 # PCC:@/pathfinder_pfs/paizo/player_companion/pfs_undead_slayers_handbook/pfs_undead_slayers_handbook.pcc
 
 #PCC:@/pathfinder_pfs/paizo/adventure_path/curse_of_the_crimson_throne/pfs_players_guide/pfs_curse_of_the_crimson_throne_players_guide.pcc

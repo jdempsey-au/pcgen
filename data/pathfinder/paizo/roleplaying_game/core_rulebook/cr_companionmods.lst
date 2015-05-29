@@ -1,12 +1,14 @@
-# CVS $Revision: 21407 $ $Author: evilmynex $ -- Sun Jan 25 18:47:12 2015 -- reformated by prettylst.pl v1.51 (build 25712)
+# CVS $Revision: 21407 $ $Author: evilmynex $ -- Mon Feb  9 18:51:00 2015 -- reformated by PCGen PrettyLST v6.04.01
 SOURCELONG:Core Rulebook	SOURCESHORT:CR	SOURCEWEB:http://paizo.com/store/downloads/pathfinder/pathfinderRPG/v5748btpy88yj	SOURCEDATE:2009-08
 # Original Entry by: Andrew Maitland
 
 ###Block:Companion for Druid and Ranger - Paladin uses same table but has separate entry
 # Class of the Master			Type				Hit Dice	Ability																				Define							Bonus Ability Pool					Combat bonus					Stat bonus			Modify VAR							Main Race Type
-###Block: 
-FOLLOWER:AnimalCompanionLVL=1		TYPE:Animal Companion	DEFINE:MasterLevel|0	DEFINE:BonusTricks|0	BONUS:VAR|MasterLevel|MASTERVAR("AnimalCompanionLVL")	BONUS:VAR|BonusTricks|MASTERVAR("AnimalCompanionLVL")/3	RACETYPE:Animal
+###Block:
+# Class of the Master		Type				Define							Modify VAR																		Main Race Type
+FOLLOWER:AnimalCompanionLVL=1	TYPE:Animal Companion	DEFINE:MasterLevel|0	DEFINE:BonusTricks|0	BONUS:VAR|MasterLevel|MASTERVAR("AnimalCompanionLVL")	BONUS:VAR|BonusTricks|1+MASTERVAR("AnimalCompanionLVL")/3	RACETYPE:Animal
 ###Block: HD
+# Class of the Master			Type				Hit Dice
 FOLLOWER:AnimalCompanionLVL=2		TYPE:Animal Companion	HD:1
 FOLLOWER:AnimalCompanionLVL=4		TYPE:Animal Companion	HD:1
 FOLLOWER:AnimalCompanionLVL=5		TYPE:Animal Companion	HD:1
@@ -22,13 +24,14 @@ FOLLOWER:AnimalCompanionLVL=17	TYPE:Animal Companion	HD:1
 FOLLOWER:AnimalCompanionLVL=18	TYPE:Animal Companion	HD:1
 FOLLOWER:AnimalCompanionLVL=20	TYPE:Animal Companion	HD:1
 ###Block:
-FOLLOWER:AnimalCompanionLVL=1		TYPE:Animal Companion	ABILITY:Special Ability|AUTOMATIC|Animal Tricks and Training	ABILITY:Special Ability|AUTOMATIC|Companion ~ Link|!PREABILITY:1,CATEGORY=Archetype,CompanionLink	ABILITY:Special Ability|AUTOMATIC|Companion ~ Share Spells|!PREABILITY:1,CATEGORY=Archetype,CompanionShareSpells
-FOLLOWER:AnimalCompanionLVL=3		TYPE:Animal Companion	ABILITY:Special Ability|AUTOMATIC|Companion ~ Evasion|!PREABILITY:1,CATEGORY=Archetype,CompanionEvasion
+# Class of the Master			Type				Ability
+FOLLOWER:AnimalCompanionLVL=1		TYPE:Animal Companion	ABILITY:Special Ability|AUTOMATIC|Animal Tricks and Training	ABILITY:Special Ability|AUTOMATIC|Companion ~ Link|!PREABILITY:1,CATEGORY=Archetype,CF_CompanionLink	ABILITY:Special Ability|AUTOMATIC|Companion ~ Share Spells|!PREABILITY:1,CATEGORY=Archetype,CF_CompanionShareSpells
+FOLLOWER:AnimalCompanionLVL=3		TYPE:Animal Companion	ABILITY:Special Ability|AUTOMATIC|Companion ~ Evasion|!PREABILITY:1,CATEGORY=Archetype,CF_CompanionEvasion
 FOLLOWER:AnimalCompanionLVL=4		TYPE:Animal Companion	ABILITY:Special Ability|AUTOMATIC|Companion ~ Animal Companion
-FOLLOWER:AnimalCompanionLVL=6		TYPE:Animal Companion	ABILITY:Special Ability|AUTOMATIC|Companion ~ Devotion|!PREABILITY:1,CATEGORY=Archetype,CompanionDevotion
-FOLLOWER:AnimalCompanionLVL=9		TYPE:Animal Companion	ABILITY:Special Ability|AUTOMATIC|Companion ~ Multiattack|!PREABILITY:1,CATEGORY=Archetype,CompanionMultiattack
+FOLLOWER:AnimalCompanionLVL=6		TYPE:Animal Companion	ABILITY:Special Ability|AUTOMATIC|Companion ~ Devotion|!PREABILITY:1,CATEGORY=Archetype,CF_CompanionDevotion
+FOLLOWER:AnimalCompanionLVL=9		TYPE:Animal Companion	ABILITY:Special Ability|AUTOMATIC|Companion ~ Multiattack|!PREABILITY:1,CATEGORY=Archetype,CF_CompanionMultiattack
 FOLLOWER:AnimalCompanionLVL=15	TYPE:Animal Companion	ABILITY:Special Ability|AUTOMATIC|Companion ~ Spell Resistance (AC)
-FOLLOWER:AnimalCompanionLVL=16	TYPE:Animal Companion	ABILITY:Special Ability|AUTOMATIC|Companion ~ Improved Evasion|!PREABILITY:1,CATEGORY=Archetype,CompanionImprovedEvasion
+FOLLOWER:AnimalCompanionLVL=16	TYPE:Animal Companion	ABILITY:Special Ability|AUTOMATIC|Companion ~ Improved Evasion|!PREABILITY:1,CATEGORY=Archetype,CF_CompanionImprovedEvasion
 
 ###Block:Special Mount - Same Table but slightly different animal list was warranted plus INT needs to be locked at 6
 # Class of the Master		Type				Auto Armor Prof				Define			Define Stat				Modify VAR								Main Race Type
@@ -50,43 +53,43 @@ FOLLOWER:SpecialMountLVL=17	TYPE:Special Mount	HD:1
 FOLLOWER:SpecialMountLVL=18	TYPE:Special Mount	HD:1
 FOLLOWER:SpecialMountLVL=20	TYPE:Special Mount	HD:1
 ###Block:
-# Class of the Master		Type				Ability																																				Main Race Type			Template
-FOLLOWER:SpecialMountLVL=1	TYPE:Special Mount	ABILITY:Special Ability|AUTOMATIC|Companion ~ Link|!PREABILITY:1,CATEGORY=Archetype,CompanionLink	ABILITY:Special Ability|AUTOMATIC|Companion ~ Share Spells|!PREABILITY:1,CATEGORY=Archetype,CompanionShareSpells
-FOLLOWER:SpecialMountLVL=3	TYPE:Special Mount	ABILITY:Special Ability|AUTOMATIC|Companion ~ Evasion|!PREABILITY:1,CATEGORY=Archetype,CompanionEvasion
+# Class of the Master		Type				Ability																																			Main Race Type			Template
+FOLLOWER:SpecialMountLVL=1	TYPE:Special Mount	ABILITY:Special Ability|AUTOMATIC|Companion ~ Link|!PREABILITY:1,CATEGORY=Archetype,CF_CompanionLink	ABILITY:Special Ability|AUTOMATIC|Companion ~ Share Spells|!PREABILITY:1,CATEGORY=Archetype,CF_CompanionShareSpells
+FOLLOWER:SpecialMountLVL=3	TYPE:Special Mount	ABILITY:Special Ability|AUTOMATIC|Companion ~ Evasion|!PREABILITY:1,CATEGORY=Archetype,CF_CompanionEvasion
 FOLLOWER:SpecialMountLVL=4	TYPE:Special Mount	ABILITY:Special Ability|AUTOMATIC|Companion ~ Special Mount
-FOLLOWER:SpecialMountLVL=6	TYPE:Special Mount	ABILITY:Special Ability|AUTOMATIC|Companion ~ Devotion|!PREABILITY:1,CATEGORY=Archetype,CompanionDevotion
-FOLLOWER:SpecialMountLVL=9	TYPE:Special Mount	ABILITY:Special Ability|AUTOMATIC|Companion ~ Multiattack|!PREABILITY:1,CATEGORY=Archetype,CompanionMultiattack
-FOLLOWER:SpecialMountLVL=11	TYPE:Special Mount																																						RACETYPE:Animal/Magical Beast	TEMPLATE:Celestial Creature
+FOLLOWER:SpecialMountLVL=6	TYPE:Special Mount	ABILITY:Special Ability|AUTOMATIC|Companion ~ Devotion|!PREABILITY:1,CATEGORY=Archetype,CF_CompanionDevotion
+FOLLOWER:SpecialMountLVL=9	TYPE:Special Mount	ABILITY:Special Ability|AUTOMATIC|Companion ~ Multiattack|!PREABILITY:1,CATEGORY=Archetype,CF_CompanionMultiattack
+FOLLOWER:SpecialMountLVL=11	TYPE:Special Mount																																					RACETYPE:Animal/Magical Beast	TEMPLATE:Celestial Creature
 FOLLOWER:SpecialMountLVL=15	TYPE:Special Mount	ABILITY:Special Ability|AUTOMATIC|Companion ~ Spell Resistance (SM)
-FOLLOWER:SpecialMountLVL=16	TYPE:Special Mount	ABILITY:Special Ability|AUTOMATIC|Companion ~ Improved Evasion|!PREABILITY:1,CATEGORY=Archetype,CompanionImprovedEvasion
+FOLLOWER:SpecialMountLVL=16	TYPE:Special Mount	ABILITY:Special Ability|AUTOMATIC|Companion ~ Improved Evasion|!PREABILITY:1,CATEGORY=Archetype,CF_CompanionImprovedEvasion
 
 ###Block: Familiar
 # Class of the Master	Type			Ability												Copy Masters BAB		Copy Masters Checks	HP formula based on Master	Use Masters skills?	Define Stat									Combat bonus										Main Race Type
-FOLLOWER:FamiliarLVL=1	TYPE:Familiar	ABILITY:Special Ability|AUTOMATIC|Familiar ~ Empathic Link				COPYMASTERBAB:MASTER	COPYMASTERCHECK:MASTER	COPYMASTERHP:max(1,MASTER/2)	USEMASTERSKILL:YES											BONUS:COMBAT|TOHIT.Natural|DEX-STR|PREVARGTEQ:DEXSCORE,STRSCORE
-FOLLOWER:FamiliarLVL=1	TYPE:Familiar	ABILITY:Special Ability|AUTOMATIC|Companion ~ Share Spells|Improved Evasion																		DEFINESTAT:MINVALUE|INT|5+((1+MASTERVAR("FamiliarLVL"))/2)	BONUS:COMBAT|AC|(1+MASTERVAR("FamiliarLVL"))/2|TYPE=NaturalArmor.STACK	RACETYPE:Animal/Magical Beast
-FOLLOWER:FamiliarLVL=3	TYPE:Familiar	ABILITY:Special Ability|AUTOMATIC|Familiar ~ Deliver Touch Spells
-FOLLOWER:FamiliarLVL=5	TYPE:Familiar	ABILITY:Special Ability|AUTOMATIC|Familiar ~ Speak with Master
-FOLLOWER:FamiliarLVL=7	TYPE:Familiar	ABILITY:Special Ability|AUTOMATIC|Familiar ~ Speak with Animals of Its Kind
-FOLLOWER:FamiliarLVL=11	TYPE:Familiar	ABILITY:Special Ability|AUTOMATIC|Familiar ~ Spell Resistance
-FOLLOWER:FamiliarLVL=13	TYPE:Familiar	ABILITY:Special Ability|AUTOMATIC|Familiar ~ Scry on Familiar
+FOLLOWER:FamiliarLVL=1	TYPE:Familiar	ABILITY:Special Ability|AUTOMATIC|Familiar ~ Empathic Link|!PREABILITY:1,CATEGORY=Archetype,CF_CompanionEmpathicLink				COPYMASTERBAB:MASTER	COPYMASTERCHECK:MASTER	COPYMASTERHP:max(1,MASTER/2)	USEMASTERSKILL:YES											BONUS:COMBAT|TOHIT.Natural|DEX-STR|PREVARGTEQ:DEXSCORE,STRSCORE
+FOLLOWER:FamiliarLVL=1	TYPE:Familiar	ABILITY:Special Ability|AUTOMATIC|Companion ~ Share Spells|!PREABILITY:1,CATEGORY=Archetype,CF_CompanionShareSpells	ABILITY:Special Ability|AUTOMATIC|Improved Evasion|!PREABILITY:1,CATEGORY=Archetype,CF_CompanionImprovedEvasion																		DEFINESTAT:MINVALUE|INT|5+((1+MASTERVAR("FamiliarLVL"))/2)	BONUS:VAR|AC_Natural_Armor|(1+MASTERVAR("FamiliarLVL"))/2|TYPE=NaturalArmor.STACK	RACETYPE:Animal/Magical Beast	DEFINE:MasterLevel|0	BONUS:VAR|MasterLevel|MASTERVAR("FamiliarLVL")
+FOLLOWER:FamiliarLVL=3	TYPE:Familiar	ABILITY:Special Ability|AUTOMATIC|Familiar ~ Deliver Touch Spells|!PREABILITY:1,CATEGORY=Archetype,CF_CompanionDeliverTouchSpells
+FOLLOWER:FamiliarLVL=5	TYPE:Familiar	ABILITY:Special Ability|AUTOMATIC|Familiar ~ Speak with Master|!PREABILITY:1,CATEGORY=Archetype,CF_CompanionSpeakwithMaster
+FOLLOWER:FamiliarLVL=7	TYPE:Familiar	ABILITY:Special Ability|AUTOMATIC|Familiar ~ Speak with Animals of Its Kind|!PREABILITY:1,CATEGORY=Archetype,CF_CompanionSpeakwithAnimalsofItsKind
+FOLLOWER:FamiliarLVL=11	TYPE:Familiar	ABILITY:Special Ability|AUTOMATIC|Familiar ~ Spell Resistance|!PREABILITY:1,CATEGORY=Archetype,CF_CompanionSpellResistance
+FOLLOWER:FamiliarLVL=13	TYPE:Familiar	ABILITY:Special Ability|AUTOMATIC|Familiar ~ Scry on Familiar|!PREABILITY:1,CATEGORY=Archetype,CF_CompanionScryonFamiliar
 
 ###Block: Specific Familiars
 # Class of the Master	Type			Required Race			Apply Kit
 FOLLOWER:FamiliarLVL=1	TYPE:Familiar	PRERACE:1,Familiar (Raven)	KIT:1|Raven Familiar Language
 
 ###Block:Familiar Bonuses to Master
-# Race of familiar			Type			Ability
-MASTERBONUSRACE:Familiar (Bat)	TYPE:Familiar	ABILITY:Internal|AUTOMATIC|Familiar (Bat)		ABILITY:FEAT|VIRTUAL|Alertness
-MASTERBONUSRACE:Familiar (Cat)	TYPE:Familiar	ABILITY:Internal|AUTOMATIC|Familiar (Cat)		ABILITY:FEAT|VIRTUAL|Alertness
-MASTERBONUSRACE:Familiar (Hawk)	TYPE:Familiar	ABILITY:Internal|AUTOMATIC|Familiar (Hawk)	ABILITY:FEAT|VIRTUAL|Alertness
-MASTERBONUSRACE:Familiar (Lizard)	TYPE:Familiar	ABILITY:Internal|AUTOMATIC|Familiar (Lizard)	ABILITY:FEAT|VIRTUAL|Alertness
-MASTERBONUSRACE:Familiar (Monkey)	TYPE:Familiar	ABILITY:Internal|AUTOMATIC|Familiar (Monkey)	ABILITY:FEAT|VIRTUAL|Alertness
-MASTERBONUSRACE:Familiar (Owl)	TYPE:Familiar	ABILITY:Internal|AUTOMATIC|Familiar (Owl)		ABILITY:FEAT|VIRTUAL|Alertness
-MASTERBONUSRACE:Familiar (Rat)	TYPE:Familiar	ABILITY:Internal|AUTOMATIC|Familiar (Rat)		ABILITY:FEAT|VIRTUAL|Alertness
-MASTERBONUSRACE:Familiar (Raven)	TYPE:Familiar	ABILITY:Internal|AUTOMATIC|Familiar (Raven)	ABILITY:FEAT|VIRTUAL|Alertness
-MASTERBONUSRACE:Familiar (Viper)	TYPE:Familiar	ABILITY:Internal|AUTOMATIC|Familiar (Viper)	ABILITY:FEAT|VIRTUAL|Alertness
-MASTERBONUSRACE:Familiar (Toad)	TYPE:Familiar	ABILITY:Internal|AUTOMATIC|Familiar (Toad)	ABILITY:FEAT|VIRTUAL|Alertness
-MASTERBONUSRACE:Familiar (Weasel)	TYPE:Familiar	ABILITY:Internal|AUTOMATIC|Familiar (Weasel)	ABILITY:FEAT|VIRTUAL|Alertness
+# Race of familiar				Type			Ability
+MASTERBONUSRACE:Familiar (Bat)		TYPE:Familiar	ABILITY:Internal|AUTOMATIC|Familiar (Bat)	ABILITY:FEAT|VIRTUAL|Alertness
+MASTERBONUSRACE:Familiar (Cat)		TYPE:Familiar	ABILITY:Internal|AUTOMATIC|Familiar (Cat)	ABILITY:FEAT|VIRTUAL|Alertness
+MASTERBONUSRACE:Familiar (Hawk)		TYPE:Familiar	ABILITY:Internal|AUTOMATIC|Familiar (Hawk)	ABILITY:FEAT|VIRTUAL|Alertness
+MASTERBONUSRACE:Familiar (Lizard)		TYPE:Familiar	ABILITY:Internal|AUTOMATIC|Familiar (Lizard)	ABILITY:FEAT|VIRTUAL|Alertness
+MASTERBONUSRACE:Familiar (Monkey)		TYPE:Familiar	ABILITY:Internal|AUTOMATIC|Familiar (Monkey)	ABILITY:FEAT|VIRTUAL|Alertness
+MASTERBONUSRACE:Familiar (Owl)		TYPE:Familiar	ABILITY:Internal|AUTOMATIC|Familiar (Owl)	ABILITY:FEAT|VIRTUAL|Alertness
+MASTERBONUSRACE:Familiar (Rat)		TYPE:Familiar	ABILITY:Internal|AUTOMATIC|Familiar (Rat)	ABILITY:FEAT|VIRTUAL|Alertness
+MASTERBONUSRACE:Familiar (Raven)		TYPE:Familiar	ABILITY:Internal|AUTOMATIC|Familiar (Raven)	ABILITY:FEAT|VIRTUAL|Alertness
+MASTERBONUSRACE:Familiar (Viper)		TYPE:Familiar	ABILITY:Internal|AUTOMATIC|Familiar (Viper)	ABILITY:FEAT|VIRTUAL|Alertness
+MASTERBONUSRACE:Familiar (Toad)		TYPE:Familiar	ABILITY:Internal|AUTOMATIC|Familiar (Toad)	ABILITY:FEAT|VIRTUAL|Alertness
+MASTERBONUSRACE:Familiar (Weasel)		TYPE:Familiar	ABILITY:Internal|AUTOMATIC|Familiar (Weasel)	ABILITY:FEAT|VIRTUAL|Alertness
 
 # Race of familiar				Type			Ability
 MASTERBONUSRACE:Familiar (Compsognathus)	TYPE:Familiar	ABILITY:Internal|AUTOMATIC|Familiar (Compsognathus)	ABILITY:FEAT|VIRTUAL|Alertness
