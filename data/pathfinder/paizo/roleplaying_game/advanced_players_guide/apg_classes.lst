@@ -70,7 +70,7 @@ CLASS:Cavalier	STARTSKILLPTS:4	CSKILL:Bluff|Climb|TYPE=Craft|Diplomacy|Handle An
 1	ABILITY:Internal|AUTOMATIC|TYPE=ArmorProfMedium|!PREABILITY:1,CATEGORY=Archetype,TYPE.CavalierArmorProficiencies,TYPE.CavalierMediumArmorProficiency
 1	ABILITY:Internal|AUTOMATIC|TYPE=ShieldProf|!PREABILITY:1,CATEGORY=Archetype,TYPE.CavalierArmorProficiencies,TYPE.CavalierShieldProficiency
 ###Block: Vars
-1	BONUS:VAR|CavalierChallengeLVL|CL	BONUS:VAR|CavalierChallengeTimes|(CL+2)/3	BONUS:VAR|CavalierMountLVL|CL
+1	BONUS:VAR|CavalierChallengeLVL|CL	BONUS:VAR|CavalierChallengeTimes|(CL+2)/3
 1	BONUS:VAR|OrderAbilityLVL|CL|!PREABILITY:1,CATEGORY=Archetype,TYPE.CavalierOrder
 ###Block: Level progression
 1	ABILITY:Cavalier Class Feature|AUTOMATIC|Cavalier ~ Challenge|!PREABILITY:1,CATEGORY=Archetype,TYPE.CavalierChallenge
@@ -674,6 +674,7 @@ CLASS:Stalwart Defender	PREABILITY:5,CATEGORY=FEAT,Dodge,Endurance,Toughness,Arm
 # Class Name		Skill Pts/Lvl	Class Skill
 CLASS:Stalwart Defender	STARTSKILLPTS:2	CSKILL:Acrobatics|Climb|Intimidate|Perception|Sense Motive
 ##Block: Normal Level Progression
+1	ABILITY:Special Ability|AUTOMATIC|Stalwart Defender ~ AC Bonus
 1	ABILITY:Special Ability|AUTOMATIC|Stalwart Defender ~ Defensive Stance
 2	ABILITY:Special Ability|AUTOMATIC|Stalwart Defender ~ Defensive Powers
 3	ABILITY:Special Ability|AUTOMATIC|Stalwart Defender ~ Uncanny Dodge
